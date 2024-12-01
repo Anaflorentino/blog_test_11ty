@@ -1,0 +1,20 @@
+{
+  "name": "blog-new-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "build:css": "sass src/assets/styles/main.scss _site/assets/styles/main.css --no-source-map",
+  "watch:css": "sass --watch src/assets/styles/main.scss:_site/assets/styles/main.css",
+  "build": "npm run build:css && eleventy",
+  "serve": "concurrently \"npm run watch:css\" \"eleventy --serve\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "fs-extra": "^11.2.0",
+    "sass": "^1.81.0"
+  }
+}
